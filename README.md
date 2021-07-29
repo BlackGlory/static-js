@@ -20,12 +20,6 @@ new StaticURLFactory({
 ```
 
 ```ts
-interface IStoreClientRequestOptions {
-  signal?: AbortSignal
-  token?: string
-  keepalive?: boolean
-}
-
 interface IDerviedImageMetadata {
   format: 'jpeg' | 'webp'
   quality: number
