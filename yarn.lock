@@ -2642,6 +2642,16 @@ extra-logger@^0.5.4:
     "@blackglory/types" "^0.4.6"
     justypes "^0.1.4"
 
+extra-memoize@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/extra-memoize/-/extra-memoize-0.1.1.tgz#0ceebb05b85f7e7529038815299d7c74a3e7e16a"
+  integrity sha512-qosfiZktpCtogy4iX7l6I+0ZvdnGKt1XtHK2N5Eg6Fv4u1RDRuugoI8VGjnrSQsdIQoEaf+V+KbmwBIX2kvS0A==
+  dependencies:
+    "@blackglory/go" "^0.1.0"
+    "@blackglory/structures" "^0.2.2"
+    extra-promise "^0.17.5"
+    fast-json-stable-stringify "^2.1.0"
+
 extra-promise@^0.17.5:
   version "0.17.6"
   resolved "https://registry.yarnpkg.com/extra-promise/-/extra-promise-0.17.6.tgz#5a9b2feff6205bf837e667d9fdc37459540b3789"
@@ -2715,7 +2725,7 @@ fast-glob@^3.1.1:
     micromatch "^4.0.2"
     picomatch "^2.2.1"
 
-fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.0.0:
+fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.0.0, fast-json-stable-stringify@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
   integrity sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==
