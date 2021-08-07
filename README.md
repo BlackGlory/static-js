@@ -29,6 +29,13 @@ interface IDerivedImageMetadata {
 }
 ```
 
+```ts
+interface IDerivedFontMetadata {
+  format: 'woff' | 'woff2'
+  subset: string
+}
+```
+
 #### createFileURL
 
 ```ts
@@ -50,5 +57,23 @@ StaticURLFactory#createDerivedImageURL(
 StaticURLFactory#createDerivedImageURL(
   filename: string
 , metadata: IDerivedImageMetadata
+): Promise<string>
+```
+
+#### createDerivedFontURL (Node.js)
+
+```ts
+StaticURLFactory#createDerivedFontURL(
+  filename: string
+, metadata: IDerivedFontMetadata
+): string
+```
+
+#### createDerivedFontURL (browser)
+
+```ts
+StaticURLFactory#createDerivedFontURL(
+  filename: string
+, metadata: IDerivedFontMetadata
 ): Promise<string>
 ```

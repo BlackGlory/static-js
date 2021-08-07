@@ -1,18 +1,9 @@
 import { hmacSHA256 } from '@utils/hmac-sha256.browser'
 import 'core-js/es/object/from-entries'
-
-export interface IStaticURLFactoryOptions {
-  server: string
-  secret: string
-}
-
-export interface IDerivedImageMetadata {
-  format: 'jpeg' | 'webp'
-  quality: number
-  maxWidth?: number
-  maxHeight?: number
-  multiple?: number
-}
+import { stringifyRecord } from '@utils/stringify-record'
+import { normalizeSubset } from '@utils/normalize-subset'
+import { IDerivedFontMetadata, IDerivedImageMetadata, IStaticURLFactoryOptions }
+  from './types'
 
 export class StaticURLFactory {
   constructor(private options: IStaticURLFactoryOptions) {}
@@ -22,9 +13,24 @@ export class StaticURLFactory {
     return url.href
   }
 
-  async createDerivedImageURL(
+  createDerivedImageURL(
     filename: string
   , metadata: IDerivedImageMetadata
+  ): Promise<string> {
+    return this.createDerivedFileURL(filename, metadata)
+  }
+
+  createDerivedFontURL(
+    filename: string
+  , metadata: IDerivedFontMetadata
+  ): Promise<string> {
+    metadata.subset = normalizeSubset(metadata.subset)
+    return this.createDerivedFileURL(filename, metadata)
+  }
+
+  private async createDerivedFileURL(
+    filename: string
+  , metadata: object
   ): Promise<string> {
     const url = new URL(`files/${filename}`, this.options.server)
     const searchParams = new URLSearchParams(stringifyRecord({
@@ -44,9 +50,4 @@ async function computeSignature(
   urlSearchParams.sort()
   const text = urlSearchParams.toString()
   return await hmacSHA256(secret, text)
-}
-
-function stringifyRecord(record: object): Record<string, string> {
-  const entries = Object.entries(record).map(([key, value]) => [key, `${value}`])
-  return Object.fromEntries(entries)
 }
