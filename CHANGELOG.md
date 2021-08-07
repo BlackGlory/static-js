@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/BlackGlory/static-js/compare/v0.1.2...v0.1.3) (2021-08-07)
+
+
+### Features
+
+* add createDerivedFontURL ([1a76d8b](https://github.com/BlackGlory/static-js/commit/1a76d8b0226e3bcf5862916cd1bd4fb6f8f04be0))
+
 ### [0.1.2](https://github.com/BlackGlory/static-js/compare/v0.1.1...v0.1.2) (2021-08-07)
 
 
