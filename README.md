@@ -10,7 +10,7 @@ yarn add @blackglory/static-js
 
 ## API
 
-### StoreClient
+### StaticClient
 
 ```ts
 new StaticURLFactory({
@@ -29,13 +29,13 @@ interface IDerviedImageMetadata {
 }
 ```
 
-#### set
+#### createFileURL
 
 ```ts
 StaticURLFactory#createFileURL(filename: string): string 
 ```
 
-#### setJSON (Node.js)
+#### createDerviedImageURL (Node.js)
 
 ```ts
 StaticURLFactory#createDerviedImageURL(
@@ -44,7 +44,7 @@ StaticURLFactory#createDerviedImageURL(
 ): string 
 ```
 
-#### setJSON (browser)
+#### createDerviedImageURL (browser)
 
 ```ts
 StaticURLFactory#createDerviedImageURL(
