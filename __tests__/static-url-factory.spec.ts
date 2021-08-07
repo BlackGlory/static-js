@@ -10,11 +10,11 @@ describe('StaticURLFactory', () => {
   })
 
   test(`
-    createDerviedImageURL(filename: string, metadata: IDerviedImageMetadata): string
+    createDerivedImageURL(filename: string, metadata: IDerivedImageMetadata): string
   `, () => {
     const factory = createFactory()
 
-    const result = factory.createDerviedImageURL('filename', {
+    const result = factory.createDerivedImageURL('filename', {
       format: 'webp'
     , quality: 80
     , maxWidth: 800

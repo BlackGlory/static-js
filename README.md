@@ -20,7 +20,7 @@ new StaticURLFactory({
 ```
 
 ```ts
-interface IDerviedImageMetadata {
+interface IDerivedImageMetadata {
   format: 'jpeg' | 'webp'
   quality: number
   maxWidth?: number
@@ -35,20 +35,20 @@ interface IDerviedImageMetadata {
 StaticURLFactory#createFileURL(filename: string): string 
 ```
 
-#### createDerviedImageURL (Node.js)
+#### createDerivedImageURL (Node.js)
 
 ```ts
-StaticURLFactory#createDerviedImageURL(
+StaticURLFactory#createDerivedImageURL(
   filename: string
-, metadata: IDerviedImageMetadata
+, metadata: IDerivedImageMetadata
 ): string 
 ```
 
-#### createDerviedImageURL (browser)
+#### createDerivedImageURL (browser)
 
 ```ts
-StaticURLFactory#createDerviedImageURL(
+StaticURLFactory#createDerivedImageURL(
   filename: string
-, metadata: IDerviedImageMetadata
+, metadata: IDerivedImageMetadata
 ): Promise<string>
 ```

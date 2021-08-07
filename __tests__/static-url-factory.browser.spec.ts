@@ -12,14 +12,14 @@ describe('StaticURLFactory', () => {
   })
 
   test(`
-    createDerviedImageURL(
+    createDerivedImageURL(
       filename: string
-    , metadata: IDerviedImageMetadata
+    , metadata: IDerivedImageMetadata
     ): Promise<string>
   `, async () => {
     const factory = createFactory()
 
-    const result = factory.createDerviedImageURL('filename', {
+    const result = factory.createDerivedImageURL('filename', {
       format: 'webp'
     , quality: 80
     , maxWidth: 800

@@ -6,7 +6,7 @@ export interface IStaticURLFactoryOptions {
   secret: string
 }
 
-export interface IDerviedImageMetadata {
+export interface IDerivedImageMetadata {
   format: 'jpeg' | 'webp'
   quality: number
   maxWidth?: number
@@ -22,9 +22,9 @@ export class StaticURLFactory {
     return url.href
   }
 
-  async createDerviedImageURL(
+  async createDerivedImageURL(
     filename: string
-  , metadata: IDerviedImageMetadata
+  , metadata: IDerivedImageMetadata
   ): Promise<string> {
     const url = new URL(`files/${filename}`, this.options.server)
     const searchParams = new URLSearchParams(stringifyRecord({
