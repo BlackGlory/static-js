@@ -2646,10 +2646,10 @@ extra-logger@^0.5.4:
     "@blackglory/types" "^0.4.6"
     justypes "^0.1.4"
 
-extra-memoize@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/extra-memoize/-/extra-memoize-0.3.2.tgz#65617307d13069640dae76601a8762377285bc1f"
-  integrity sha512-WlEOXe59vQaWlkubt2q/vgbdemkkvewdXXeAu3YLXC2TTK4K3zTTRP4KHFV66NgCv7hGKUbRnLOEfSoUZJVDtQ==
+extra-memoize@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/extra-memoize/-/extra-memoize-0.4.0.tgz#56af864ce250485be12ee4ba30f8399bdb3604f5"
+  integrity sha512-rhUH8ykoPnrTkm66htI4uUpduQYks265K5msJtPWuLJwAgNFKfvW+oiRKyYMyA049DsADRLUwPCMbLQHA9S+/g==
   dependencies:
     "@blackglory/structures" "^0.2.5"
     "@blackglory/types" "^0.5.1"
