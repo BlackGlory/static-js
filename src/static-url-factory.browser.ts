@@ -1,5 +1,4 @@
 import { hmacSHA256 } from '@utils/hmac-sha256.browser'
-import 'core-js/es/object/from-entries'
 import { stringifyRecord } from '@utils/stringify-record'
 import { normalizeSubset } from '@utils/normalize-subset'
 import { IDerivedFontMetadata, IDerivedImageMetadata, IStaticURLFactoryOptions }
