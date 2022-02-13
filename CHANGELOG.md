@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/BlackGlory/static-js/compare/v0.1.9...v0.2.0) (2022-02-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* make Node.js and browser version have the same interface.
+
+### Features
+
+* add contentType support ([51a6f12](https://github.com/BlackGlory/static-js/commit/51a6f12a53572b97e0e6e7b1ec4ef4614686eac6))
+
 ### [0.1.9](https://github.com/BlackGlory/static-js/compare/v0.1.8...v0.1.9) (2022-01-06)
 
 ### [0.1.8](https://github.com/BlackGlory/static-js/compare/v0.1.7...v0.1.8) (2021-10-14)
