@@ -1,7 +1,5 @@
 # static-js
-
 ## Install
-
 ```sh
 npm install --save @blackglory/static-js
 # or
@@ -9,9 +7,7 @@ yarn add @blackglory/static-js
 ```
 
 ## API
-
 ### StaticClient
-
 ```ts
 new StaticURLFactory({
   server: string
@@ -37,43 +33,24 @@ interface IDerivedFontMetadata {
 ```
 
 #### createFileURL
-
 ```ts
-StaticURLFactory#createFileURL(filename: string): string 
+StaticURLFactory#createFileURL(filename: string, contentType?: string): string
 ```
 
-#### createDerivedImageURL (Node.js)
-
+#### createDerivedImageURL
 ```ts
 StaticURLFactory#createDerivedImageURL(
   filename: string
 , metadata: IDerivedImageMetadata
-): string 
-```
-
-#### createDerivedImageURL (browser)
-
-```ts
-StaticURLFactory#createDerivedImageURL(
-  filename: string
-, metadata: IDerivedImageMetadata
+, contentType?: string
 ): Promise<string>
 ```
 
-#### createDerivedFontURL (Node.js)
-
+#### createDerivedFontURL
 ```ts
 StaticURLFactory#createDerivedFontURL(
   filename: string
 , metadata: IDerivedFontMetadata
-): string
-```
-
-#### createDerivedFontURL (browser)
-
-```ts
-StaticURLFactory#createDerivedFontURL(
-  filename: string
-, metadata: IDerivedFontMetadata
+, contentType?: string
 ): Promise<string>
 ```
