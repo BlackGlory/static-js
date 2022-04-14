@@ -1,8 +1,8 @@
 import {
   memoize as extraMemoize
 , memoizeAsync as extraMemoizeAsync
-, LRUCache
 } from 'extra-memoize'
+import { LRUCache } from '@extra-memoize/memory-cache'
 
 const cache = new LRUCache<any>(5)
 
