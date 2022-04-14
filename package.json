@@ -12,8 +12,8 @@
   "browser": {
     "./lib/es2015/static-url-factory.js": "./lib/es2015/static-url-factory.browser.js",
     "./lib/es2018/static-url-factory.js": "./lib/es2018/static-url-factory.browser.js",
-    "./lib/es2015/utils/hmac-sha256.js": "./lib/es2015/hmac-sha256.browser.js",
-    "./lib/es2018/utils/hmac-sha256.js": "./lib/es2018/hmac-sha256.browser.js"
+    "./lib/es2015/utils/hmac-sha256.js": "./lib/es2015/utils/hmac-sha256.browser.js",
+    "./lib/es2018/utils/hmac-sha256.js": "./lib/es2018/utils/hmac-sha256.browser.js"
   },
   "sideEffects": false,
   "repository": "git@github.com:BlackGlory/static-js.git",
