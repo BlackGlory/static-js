@@ -1,7 +1,7 @@
 import { stringifyRecord } from '@utils/stringify-record'
 import { normalizeSubset } from '@utils/normalize-subset'
-import { IDerivedFontMetadata, IDerivedImageMetadata, IStaticURLFactoryOptions }
-  from './types'
+import { IDerivedFontMetadata, IDerivedImageMetadata, IStaticURLFactoryOptions } from './types'
+import { Awaitable } from 'justypes'
 
 export abstract class StaticURLFactoryCommon {
   constructor(private options: IStaticURLFactoryOptions) {}
@@ -49,8 +49,8 @@ export abstract class StaticURLFactoryCommon {
     return url.href
   }
 
-  abstract computeSignature(
+  protected abstract computeSignature(
     secret: string
   , params: object
-  ): Promise<string>
+  ): Awaitable<string>
 }

@@ -3,10 +3,10 @@ import { stringifyRecord } from '@utils/stringify-record'
 import { StaticURLFactoryCommon } from './static-url-factory.common'
 
 export class StaticURLFactory extends StaticURLFactoryCommon {
-  async computeSignature(
+  protected computeSignature(
     secret: string
   , params: object
-  ): Promise<string> {
+  ): string {
     const urlSearchParams = new URLSearchParams(stringifyRecord(params))
     urlSearchParams.sort()
     const text = urlSearchParams.toString()
