@@ -2,9 +2,10 @@ import {
   memoize as extraMemoize
 , memoizeAsync as extraMemoizeAsync
 } from 'extra-memoize'
-import { LRUCache } from '@extra-memoize/memory-cache'
+import { TLRUCache } from '@extra-memoize/memory-cache'
+import ms from 'ms'
 
-const cache = new LRUCache<any>(5)
+const cache = new TLRUCache<any>(50, ms('1s'))
 
 export function memoize<Result>(
   fn: (...args: any[]) => Result
