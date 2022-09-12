@@ -5,7 +5,7 @@ import {
 import { TLRUCache } from '@extra-memoize/memory-cache'
 import ms from 'ms'
 
-const cache = new TLRUCache<any>(50, ms('1s'))
+const cache = new TLRUCache(50, ms('1s'))
 
 export function memoize<Result>(
   fn: (...args: any[]) => Result
