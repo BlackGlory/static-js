@@ -76,7 +76,7 @@
   "dependencies": {
     "@extra-memoize/memory-cache": "^0.2.4",
     "extra-memoize": "^0.9.1",
-    "justypes": "^2.2.0",
+    "justypes": "^3.0.0",
     "ms": "^2.1.3"
   }
 }
