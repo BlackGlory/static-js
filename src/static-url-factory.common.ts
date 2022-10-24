@@ -2,12 +2,13 @@ import { stringifyRecord } from '@utils/stringify-record'
 import { normalizeSubset } from '@utils/normalize-subset'
 import { IDerivedFontMetadata, IDerivedImageMetadata, IStaticURLFactoryOptions } from './types'
 import { Awaitable } from 'justypes'
+import { appendPathname } from 'url-operator'
 
 export abstract class StaticURLFactoryCommon {
   constructor(private options: IStaticURLFactoryOptions) {}
 
   createFileURL(filename: string, contentType?: string): string {
-    const url = new URL(`files/${filename}`, this.options.server)
+    const url = appendPathname(this.options.server, `files/${filename}`)
     if (contentType) {
       url.search = new URLSearchParams({ contentType }).toString()
     }
@@ -36,7 +37,7 @@ export abstract class StaticURLFactoryCommon {
   , metadata: object
   , contentType?: string
   ): Promise<string> {
-    const url = new URL(`files/${filename}`, this.options.server)
+    const url = appendPathname(this.options.server, `files/${filename}`)
     const searchParams = new URLSearchParams(stringifyRecord({
       ...metadata
     , ...(contentType ? { contentType } : {})
