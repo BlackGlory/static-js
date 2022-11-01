@@ -4,7 +4,6 @@ import resolve from '@rollup/plugin-node-resolve'
 import json from '@rollup/plugin-json'
 import { terser } from 'rollup-plugin-terser'
 import analyze from 'rollup-plugin-analyzer'
-import alias from '@rollup/plugin-alias'
 import replace from '@rollup/plugin-replace'
 
 const UMD_NAME = 'Static'
@@ -22,13 +21,7 @@ export default [
 
 function createOptions({ directory, target }) {
   const commonPlugins = [
-    alias({
-      entries: [
-        { find: '@utils/hmac-sha256', replacement: '@utils/hmac-sha256.browser' }
-      , { find: '@src/static-url-factory', replacement: '@src/static-url-factory.browser' }
-      ]
-    })
-  , replace({
+    replace({
       'Object.defineProperty(exports, "__esModule", { value: true });': ''
     , delimiters: ['\n', '\n']
     })
