@@ -3030,6 +3030,11 @@ extglob@^2.0.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
+extra-compatible@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/extra-compatible/-/extra-compatible-0.1.2.tgz#558e55e75ef57d2ecd6f998785ff70068ef741c0"
+  integrity sha512-A9XTzIUwgbBsx2cXdHF00rapce5YKVBtAaPv4C05vXNNXxeBX2OqjExEQfNyvyNoLLXg9u2sI4mXqFe9OQniiw==
+
 extra-filesystem@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/extra-filesystem/-/extra-filesystem-0.4.2.tgz#b386e666c3b2361de1a6d40e2f66d141b44d350b"

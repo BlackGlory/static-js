@@ -7,15 +7,13 @@ yarn add @blackglory/static-js
 ```
 
 ## API
-### StaticClient
+### StaticURLFactory
 ```ts
-new StaticURLFactory({
+interface IStaticURLFactoryOptions {
   server: string
   secret: string
-})
-```
+}
 
-```ts
 interface IDerivedImageMetadata {
   format: 'jpeg' | 'webp'
   quality: number
@@ -23,34 +21,27 @@ interface IDerivedImageMetadata {
   maxHeight?: number
   multiple?: number
 }
-```
 
-```ts
 interface IDerivedFontMetadata {
   format: 'woff' | 'woff2'
   subset: string
 }
-```
 
-#### createFileURL
-```ts
-StaticURLFactory#createFileURL(filename: string, contentType?: string): string
-```
+class StaticURLFactory {
+  constructor(options: IStaticURLFactoryOptions)
 
-#### createDerivedImageURL
-```ts
-StaticURLFactory#createDerivedImageURL(
-  filename: string
-, metadata: IDerivedImageMetadata
-, contentType?: string
-): Promise<string>
-```
+  createFileURL(filename: string, contentType?: string): string
 
-#### createDerivedFontURL
-```ts
-StaticURLFactory#createDerivedFontURL(
-  filename: string
-, metadata: IDerivedFontMetadata
-, contentType?: string
-): Promise<string>
+  createDerivedImageURL(
+    filename: string
+  , metadata: IDerivedImageMetadata
+  , contentType?: string
+  ): Promise<string>
+
+  createDerivedFontURL(
+    filename: string
+  , metadata: IDerivedFontMetadata
+  , contentType?: string
+  ): Promise<string>
+}
 ```

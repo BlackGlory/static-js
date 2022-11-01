@@ -9,12 +9,6 @@
   ],
   "main": "lib/es2018/index.js",
   "types": "lib/es2018/index.d.ts",
-  "browser": {
-    "./lib/es2015/static-url-factory.js": "./lib/es2015/static-url-factory.browser.js",
-    "./lib/es2018/static-url-factory.js": "./lib/es2018/static-url-factory.browser.js",
-    "./lib/es2015/utils/hmac-sha256.js": "./lib/es2015/utils/hmac-sha256.browser.js",
-    "./lib/es2018/utils/hmac-sha256.js": "./lib/es2018/utils/hmac-sha256.browser.js"
-  },
   "sideEffects": false,
   "repository": "git@github.com:BlackGlory/static-js.git",
   "author": "BlackGlory <woshenmedoubuzhidao@blackglory.me>",
@@ -75,6 +69,7 @@
   },
   "dependencies": {
     "@extra-memoize/memory-cache": "^0.2.4",
+    "extra-compatible": "^0.1.2",
     "extra-memoize": "^0.9.1",
     "justypes": "^3.0.0",
     "ms": "^2.1.3",
