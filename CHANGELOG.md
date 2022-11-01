@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/BlackGlory/static-js/compare/v0.2.7...v0.2.8) (2022-11-01)
+
+
+### Bug Fixes
+
+* bundle ([49cc701](https://github.com/BlackGlory/static-js/commit/49cc7011f1fd230fe66bd1ccb51ecb8f4a0e8306))
+
 ### [0.2.7](https://github.com/BlackGlory/static-js/compare/v0.2.6...v0.2.7) (2022-11-01)
 
 ### [0.2.6](https://github.com/BlackGlory/static-js/compare/v0.2.5...v0.2.6) (2022-10-24)
