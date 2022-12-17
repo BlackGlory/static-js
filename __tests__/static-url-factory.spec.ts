@@ -1,5 +1,4 @@
 import { StaticURLFactory } from '@src/static-url-factory'
-import '@blackglory/jest-matchers'
 
 describe('StaticURLFactory', () => {
   describe('createFileURL', () => {
@@ -60,20 +59,18 @@ describe('StaticURLFactory', () => {
     test('only metadata', async () => {
       const factory = createFactory()
 
-      const result = factory.createDerivedFontURL('filename', {
+      const result = await factory.createDerivedFontURL('filename', {
         format: 'woff'
       , subset: 'Hello World'
       })
-      const proResult = await result
 
-      expect(result).toBePromise()
-      expect(proResult).toBe('https://localhost:8080/files/filename?format=woff&subset=+HWdelor&signature=0ba316164747e67a676ec9749594cc7f9c4b1faec4e795d34ea96567bb32f5ff')
+      expect(result).toBe('https://localhost:8080/files/filename?format=woff&subset=+HWdelor&signature=0ba316164747e67a676ec9749594cc7f9c4b1faec4e795d34ea96567bb32f5ff')
     })
 
     test('with contentType', async () => {
       const factory = createFactory()
 
-      const result = factory.createDerivedFontURL(
+      const result = await factory.createDerivedFontURL(
         'filename'
       , {
           format: 'woff'
@@ -81,10 +78,8 @@ describe('StaticURLFactory', () => {
         }
       , 'font/woff'
       )
-      const proResult = await result
 
-      expect(result).toBePromise()
-      expect(proResult).toBe('https://localhost:8080/files/filename?format=woff&subset=+HWdelor&contentType=font%2Fwoff&signature=ce9304342567e883056739214d38318602c6ae2259854b0f2f610244a34b1350')
+      expect(result).toBe('https://localhost:8080/files/filename?format=woff&subset=+HWdelor&contentType=font%2Fwoff&signature=ce9304342567e883056739214d38318602c6ae2259854b0f2f610244a34b1350')
     })
   })
 })
