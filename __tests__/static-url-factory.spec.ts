@@ -1,4 +1,4 @@
-import { StaticURLFactory } from '@src/static-url-factory'
+import { StaticURLFactory } from '@src/static-url-factory.js'
 
 describe('StaticURLFactory', () => {
   describe('createFileURL', () => {

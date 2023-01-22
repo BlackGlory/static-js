@@ -1,1 +1,1 @@
-export * from '@src/static-url-factory'
+export * from '@src/static-url-factory.js'

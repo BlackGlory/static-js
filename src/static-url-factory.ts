@@ -1,5 +1,5 @@
-import { stringifyRecord } from '@utils/stringify-record'
-import { normalizeSubset } from '@utils/normalize-subset'
+import { stringifyRecord } from '@utils/stringify-record.js'
+import { normalizeSubset } from '@utils/normalize-subset.js'
 import { appendPathname } from 'url-operator'
 import { hmacSHA256 } from 'extra-compatible'
 
