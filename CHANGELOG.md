@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/BlackGlory/static-js/compare/v0.3.0...v0.3.1) (2023-06-11)
+
+
+### Bug Fixes
+
+* export src ([2de5249](https://github.com/BlackGlory/static-js/commit/2de52498a4ac40f6c83904f6af62591faf742bf1))
+
 ## [0.3.0](https://github.com/BlackGlory/static-js/compare/v0.2.8...v0.3.0) (2023-01-22)
 
 
