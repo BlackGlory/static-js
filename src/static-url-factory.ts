@@ -57,10 +57,10 @@ export class StaticURLFactory {
     const url = appendPathname(this.options.server, `files/${filename}`)
     const searchParams = new URLSearchParams(stringifyRecord({
       ...metadata
-    , ...(contentType ? { contentType } : {})
+    , ...contentType && { contentType }
     , signature: await this.computeSignature(this.options.secret, {
         ...metadata
-      , ...(contentType ? { contentType } : {})
+      , ...contentType && { contentType }
       })
     }))
     url.search = searchParams.toString()
