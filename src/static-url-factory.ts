@@ -22,10 +22,14 @@ export interface IDerivedFontMetadata {
 }
 
 export class StaticURLFactory {
-  constructor(private options: IStaticURLFactoryOptions) {}
+  private server: URL
+
+  constructor(private options: IStaticURLFactoryOptions) {
+    this.server = new URL(options.server)
+  }
 
   createFileURL(filename: string, contentType?: string): string {
-    const url = appendPathname(this.options.server, `files/${filename}`)
+    const url = appendPathname(this.server, `files/${filename}`)
     if (contentType) {
       url.search = new URLSearchParams({ contentType }).toString()
     }
@@ -54,7 +58,7 @@ export class StaticURLFactory {
   , metadata: object
   , contentType?: string
   ): Promise<string> {
-    const url = appendPathname(this.options.server, `files/${filename}`)
+    const url = appendPathname(this.server, `files/${filename}`)
     const searchParams = new URLSearchParams(stringifyRecord({
       ...metadata
     , ...contentType && { contentType }

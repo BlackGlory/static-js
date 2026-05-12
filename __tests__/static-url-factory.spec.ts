@@ -1,3 +1,4 @@
+import { describe, test, expect } from 'vitest'
 import { StaticURLFactory } from '@src/static-url-factory.js'
 
 describe('StaticURLFactory', () => {
